@@ -43,3 +43,19 @@ DescribeDifference(y, x)
 ### Bonus ###
 
 # Rewrite your `DescribeDifference` function to tell you the name of the vector which is longer
+DescribeDifference <- function(a, b) {
+  N <- abs(a - b)
+  if(a > b) {
+    result.1a <- 'Your first vector' 
+    result.1b <- 'is longer by'
+    result.1c <- 'element/s'
+    result.1d <- paste(result.1a, a, result.1b, N, result.1c)
+    return(result.1d)
+  } else if(a < b) {
+    result.2a <- 'Your second vector'
+    result.2b <- 'is longer by'
+    result.2c <- 'element/s'
+    result.2d <- paste(result.2a, b, result.2b, N, result.2c)
+    return(result.2d)
+  }
+}
